@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <h3>Add a dose to <%= @cocktail.name %></h3>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.submit class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</div>
