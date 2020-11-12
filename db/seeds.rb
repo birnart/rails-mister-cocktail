@@ -8,11 +8,21 @@
 require 'open-uri'
 require "json"
 
-url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-cts_s = open(url).read
-cts = JSON.parse(cts_s)
-# cts.delete_at[0]
+# i_url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+# cts_s = open(i_url).read
+# cts = JSON.parse(cts_s)
+# # cts.delete_at[0]
+# Ingredient.delete_all
 
-cts["drinks"].each do |cocktail|
-  Ingredient.create(name: cocktail["strIngredient1"])
+# cts["drinks"].each do |cocktail|
+#   Ingredient.create(name: cocktail["strIngredient1"])
+# end
+
+
+c_url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+cts_c = open(c_url).read
+cts_fr = JSON.parse(cts_c)
+
+cts_fr["drinks"].each do |cocktail|
+  Cocktail.create(name: cocktail["strDrink"])
 end
