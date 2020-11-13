@@ -2,3 +2,69 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+// .card-category {
+//   margin: 5px;
+//   background-size: cover;
+//   background-position: center;
+//   height: 180px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-decoration: none;
+//   color: white;
+//   font-size: 24px;
+//   font-weight: bold;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   display: flex;
+// }
+.cards {
+  margin-top: 10px;
+  display: grid;
+  grid-gap: 10px;
+  flex-grow: 1;
+
+  .card-category {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 22px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  }
+}
+.container {
+  width: 100%;
+}
+@media (max-width: 5000px) {
+  /* For a screen < 960px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1500px) {
+  /* For a screen < 960px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1300px) {
+  /* For a screen < 720px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr 1fr;  }
+}
+@media (max-width: 700px) {
+  /* For a screen < 540px, this CSS will be read */
+  .cards {
+    grid-template-columns: 1fr;
+
+  }
+}
+

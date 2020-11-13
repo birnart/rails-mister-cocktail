@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    # img_finder
     @doses = Dose.where(cocktail_id: @cocktail)
   end
 

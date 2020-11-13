@@ -1,10 +1,21 @@
-<h1>All Cocktails</h1>
-<ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1508253730651-e5ace80a7025?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80);">
+  <div class="container">
+    <h1>All Cocktails</h1>
+    <p>Select to see and edit doses</p>
+    <a class="btn btn-danger" href="cocktails/new">+Add a new Cocktail</a>
+  </div>
+</div>
+
+
+<div class="cards m-3">
   <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to "#{cocktail.name}", "cocktails/#{cocktail.id}" %>
-    </li>
+      <div class="something">
+          <div class="card-category d-flex mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cocktail.img_url %>)">
+            <%= link_to "#{cocktail.name}", "cocktails/#{cocktail.id}" %>
+          </div>
+      </div>
   <% end %>
-</ul>
-<hr>
-<%= link_to "+Add a new Cocktail", "cocktails/new" %>
+</div>
+
+  <hr>
+</div>

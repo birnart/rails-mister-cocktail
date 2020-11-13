@@ -1,17 +1,27 @@
-<h1><%= @cocktail.name %></h1>
-<hr>
-<ul>
-  <% @doses.each do |dose| %>
-  <li>
-    <%= dose.description %>:
-    <%= Ingredient.find(dose.ingredient_id).name %>
-    <%= link_to "remove", dose_path(dose[:id]), method: :delete, data: { confirm: "Are you sure?" } %>
-    </li>
-  <% end %>
-</ul>
-<hr>
-<%= link_to "+Add a dose", "/cocktails/#{@cocktail[:id]}/doses/new" %> |
-<%= link_to "Back to List", "/cocktails" %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @cocktail.img_url %>);">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+    <p>Delicious choice!</p>
+<!--     <a class="btn btn-danger" href="cocktails/new">+Add a new Cocktail</a>
+ -->  </div>
+</div>
+<div class="container">
+  <hr>
+  <ul>
+    <% @doses.each do |dose| %>
+    <li>
+      <%= dose.description %>:
+      <%= Ingredient.find(dose.ingredient_id).name %>
+      <%= link_to "remove", dose_path(dose[:id]), method: :delete, data: { confirm: "Are you sure?" } %>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+  <div class="container ml-5">
+    <%= link_to "+Add a dose", "/cocktails/#{@cocktail[:id]}/doses/new" %> |
+    <%= link_to "Back to List", "/cocktails" %>
+  </div>
+</div>
 
 
 
