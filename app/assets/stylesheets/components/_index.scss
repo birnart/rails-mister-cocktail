@@ -38,7 +38,16 @@
     color: white;
     font-weight: bolder;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    border-radius: 3px;
+    box-shadow: 1px 2px 10px lightgrey;
   }
+}
+.card-category > a {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 26px;
+  font-weight: bold;
 }
 .container {
   width: 100%;

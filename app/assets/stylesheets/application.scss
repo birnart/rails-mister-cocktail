@@ -19,3 +19,19 @@
 //   }
 // }
 @import "components/banner";
+
+body {
+  background-color: #F2F1EF;
+}
+.col-4 {
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 20px lightgrey;
+  background-color: white;
+}
+.col-6 {
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 20px lightgrey;
+  background-color: white;
+}
